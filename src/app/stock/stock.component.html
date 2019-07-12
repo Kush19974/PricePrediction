@@ -1,0 +1,10 @@
+<input #stockSymbol type="text" name="" value="" placeholder="Search stock you want to predict">
+<button type="button" name="button" (click)="this.getPrice(stockSymbol.value)" >Submit</button>
+<div class="priceDATA">
+  <table border="1">
+    <tr *ngIf="this.priceD !== undefined">
+      <td>{{this.price.symbol}}</td>
+      <td *ngFor="let p of this.priceD.price">{{p}}</td>
+    </tr>
+  </table>
+</div>
