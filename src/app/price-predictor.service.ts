@@ -10,6 +10,7 @@ export class PricePredictorService {
   getPrice(symbol: String):StockClass{
     for(var i = 0; i < this.priceData.length; i++)
     {
+      // something is wrong
       if(this.priceData[i].symbol == symbol)
         return this.priceData[i];
     }
