@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {PricePredictorService} from '../price-predictor.service';
-import {StockClass} from '../stock';
+import {Stock} from '../stock';
+import {STOCKS} from '../share-stock';
 
 @Component({
   selector: 'app-stock',
@@ -8,14 +9,14 @@ import {StockClass} from '../stock';
   styleUrls: ['./stock.component.css']
 })
 export class StockComponent implements OnInit {
-  private currentPrice : StockClass;
+  private currentPriceData : Stock;
 
   constructor(private stockservice : PricePredictorService) { }
 
   ngOnInit() {
   }
-  getPrice(symbol: string):void{
-    this.currentPrice = this.stockservice.getPrice(symbol);
+  getPrice(symbol:string):void{
+    this.currentPriceData = this.stockservice.getPrice(symbol);
   }
 
 }

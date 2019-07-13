@@ -1,18 +1,19 @@
 import { Injectable } from '@angular/core';
 import { STOCKS } from './share-stock';
-import {StockClass} from './stock';
+import {Stock} from './stock';
 
 @Injectable()
 export class PricePredictorService {
-  private priceData : StockClass[] = STOCKS;
+  private currentPriceData: Stock;
+
   constructor() { }
 
-  getPrice(symbol: String):StockClass{
-    for(var i = 0; i < this.priceData.length; i++)
+  getPrice(symbol: string):Stock{
+    for(var i = 0; i < STOCKS.length; i++)
     {
-      // something is wrong
-      if(this.priceData[i].symbol == symbol)
-        return this.priceData[i];
+      if(STOCKS[i].symbol == symbol)
+        return STOCKS[i];
     }
   }
+
 }

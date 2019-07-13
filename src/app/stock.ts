@@ -1,4 +1,4 @@
-export class StockClass {
+export class Stock {
   symbol: string;
-  price : Array <Object>;
+  price : string; // comma seprated values
 }
