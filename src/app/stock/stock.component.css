@@ -1,0 +1,6 @@
+.inputField{
+  box-sizing: content-box;
+}
+.resultTable{
+  box-sizing: border-box;
+}

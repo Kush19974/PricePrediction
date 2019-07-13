@@ -1,12 +1,16 @@
-<div class="">
-  <input type="text" name="" value="" placeholder="Enter stock here" #symbol>
-  <button type="button" name="button" (click)="getPrice(symbol.value)">
-    Submit
-  </button>
-  <table border="1">
-    <tr *ngIf="this.currentPriceData !== undefined ">
-      <td>{{this.currentPriceData.symbol}}</td>
-      <td *ngFor="let p of this.currentPriceData.price.split(',')">{{p}}</td>
-    </tr>
-  </table>
+<div class="predictor">
+  <div class="inputField">
+    <input type="text" name="" value="" placeholder="Enter stock here" #symbol>
+    <button type="button" name="button" (click)="getPrice(symbol.value)">
+      Submit
+    </button>
+  </div>
+  <div class="resultTable" id="tb">
+    <table>
+      <tr *ngIf="this.currentPriceData !== undefined ">
+        <td>{{this.currentPriceData.symbol}}</td>
+        <td *ngFor="let p of this.currentPriceData.price.split(',')">{{p}}</td>
+      </tr>
+    </table>
+  </div>
 </div>

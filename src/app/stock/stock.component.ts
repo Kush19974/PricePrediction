@@ -19,4 +19,8 @@ export class StockComponent implements OnInit {
     this.currentPriceData = this.stockservice.getPrice(symbol);
   }
 
+  showDiv():void {
+    document.getElementById('tb').style.display = "block";
+  }
+
 }
