@@ -10,17 +10,13 @@ import {STOCKS} from '../share-stock';
 })
 export class StockComponent implements OnInit {
   private currentPriceData : Stock;
-
   constructor(private stockservice : PricePredictorService) { }
-
   ngOnInit() {
   }
   getPrice(symbol:string):void{
     this.currentPriceData = this.stockservice.getPrice(symbol);
   }
-
   showDiv():void {
     document.getElementById('tb').style.display = "block";
   }
-
 }
